@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import MatrixRain from '@/components/MatrixRain';
 import HackerDashboard from '@/components/HackerDashboard';
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -749,7 +748,7 @@ const SEQUENCE: SeqEntry[] = [
   },
 ];
 
-const MAX_LINES = 20;
+const MAX_LINES = 18;
 
 export default function TerminalHero() {
   const [lines, setLines] = useState<RenderedLine[]>(
@@ -832,18 +831,15 @@ export default function TerminalHero() {
     [...lines].reverse().find((l) => l.kind === 'cmd')?.prompt ?? P_KALI;
 
   return (
-    <section className="relative overflow-hidden bg-[#0a0a0a]">
-      {/* Matrix rain fondo */}
-      <div className="absolute inset-0">
-        <MatrixRain />
-      </div>
+    <section className="relative overflow-hidden">
+      {/* Matrix rain fondo — viene del wrapper de page.tsx */}
 
-      {/* Vignette */}
+      {/* Vignette local más suave */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.88) 100%)',
+            'radial-gradient(ellipse at 50% 40%, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 100%)',
         }}
       />
 
@@ -881,9 +877,9 @@ export default function TerminalHero() {
         </div>
 
         {/* Terminal + Dashboard */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8 lg:h-[520px]">
           {/* Terminal principal */}
-          <div className="rounded-lg border border-[#00ff9f22] bg-[#0a0a0aee] shadow-[0_0_40px_#00ff9f15] overflow-hidden flex flex-col">
+          <div className="rounded-lg border border-[#00ff9f22] bg-[#0a0a0aee] shadow-[0_0_40px_#00ff9f15] overflow-hidden flex flex-col h-[420px] lg:h-full">
             <div className="flex items-center gap-2 px-4 py-2.5 bg-[#0d0d0ddd] border-b border-[#00ff9f11] shrink-0">
               <span className="w-3 h-3 rounded-full bg-[#ff5f57] shadow-[0_0_6px_#ff5f57]" />
               <span className="w-3 h-3 rounded-full bg-[#febc2e] shadow-[0_0_6px_#febc2e]" />
@@ -894,7 +890,7 @@ export default function TerminalHero() {
             </div>
             <div
               ref={containerRef}
-              className="p-4 flex-1 h-80 overflow-y-hidden font-mono text-[12px] leading-6"
+              className="p-4 flex-1 min-h-0 overflow-y-hidden font-mono text-[12px] leading-6"
             >
               {lines.map((line, i) => {
                 if (line.kind === 'blank')

@@ -241,6 +241,9 @@ body {
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .hacker-panel:hover {
   border-color: rgba(0, 255, 159, 0.3);
