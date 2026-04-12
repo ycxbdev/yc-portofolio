@@ -749,8 +749,12 @@ const SEQUENCE: SeqEntry[] = [
   },
 ];
 
+const MAX_LINES = 20;
+
 export default function TerminalHero() {
-  const [lines, setLines] = useState<RenderedLine[]>(BOOT_LINES);
+  const [lines, setLines] = useState<RenderedLine[]>(
+    BOOT_LINES.slice(-MAX_LINES)
+  );
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -762,20 +766,29 @@ export default function TerminalHero() {
           if (cancelled) return;
 
           if (entry.speed === 0) {
-            setLines((prev) => [
-              ...prev,
-              {
-                text: entry.text,
-                done: true,
-                kind: entry.kind,
-                prompt: entry.prompt,
-              },
-            ]);
+            setLines((prev) =>
+              [
+                ...prev,
+                {
+                  text: entry.text,
+                  done: true,
+                  kind: entry.kind,
+                  prompt: entry.prompt,
+                },
+              ].slice(-MAX_LINES)
+            );
           } else {
-            setLines((prev) => [
-              ...prev,
-              { text: '', done: false, kind: entry.kind, prompt: entry.prompt },
-            ]);
+            setLines((prev) =>
+              [
+                ...prev,
+                {
+                  text: '',
+                  done: false,
+                  kind: entry.kind,
+                  prompt: entry.prompt,
+                },
+              ].slice(-MAX_LINES)
+            );
 
             for (let i = 1; i <= entry.text.length; i++) {
               if (cancelled) return;
@@ -803,9 +816,9 @@ export default function TerminalHero() {
         }
 
         if (cancelled) return;
-        // Reiniciar conservando las últimas 10 líneas como contexto
+        // Reiniciar
         await new Promise((r) => setTimeout(r, 1200));
-        setLines(BOOT_LINES);
+        setLines(BOOT_LINES.slice(-MAX_LINES));
       }
     }
 
@@ -814,12 +827,6 @@ export default function TerminalHero() {
       cancelled = true;
     };
   }, []);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.scrollTop = containerRef.current.scrollHeight;
-    }
-  }, [lines]);
 
   const lastPrompt =
     [...lines].reverse().find((l) => l.kind === 'cmd')?.prompt ?? P_KALI;
@@ -887,7 +894,7 @@ export default function TerminalHero() {
             </div>
             <div
               ref={containerRef}
-              className="p-4 flex-1 h-80 overflow-y-auto font-mono text-[12px] leading-6 scrollbar-hide"
+              className="p-4 flex-1 h-80 overflow-y-hidden font-mono text-[12px] leading-6"
             >
               {lines.map((line, i) => {
                 if (line.kind === 'blank')
