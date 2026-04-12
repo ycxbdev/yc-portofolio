@@ -280,7 +280,7 @@ function HexDumpPanel() {
 
 export default function HackerDashboard() {
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-3 w-full h-[420px] lg:h-full">
+    <div className="grid grid-cols-2 grid-rows-2 gap-3 w-full h-105 lg:h-full">
       <NetworkScanPanel />
       <LiveLogPanel />
       <BruteForcePanel />

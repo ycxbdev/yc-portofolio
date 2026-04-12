@@ -877,9 +877,9 @@ export default function TerminalHero() {
         </div>
 
         {/* Terminal + Dashboard */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8 lg:h-[520px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8 lg:h-130">
           {/* Terminal principal */}
-          <div className="rounded-lg border border-[#00ff9f22] bg-[#0a0a0aee] shadow-[0_0_40px_#00ff9f15] overflow-hidden flex flex-col h-[420px] lg:h-full">
+          <div className="rounded-lg border border-[#00ff9f22] bg-[#0a0a0aee] shadow-[0_0_40px_#00ff9f15] overflow-hidden flex flex-col h-105 lg:h-full">
             <div className="flex items-center gap-2 px-4 py-2.5 bg-[#0d0d0ddd] border-b border-[#00ff9f11] shrink-0">
               <span className="w-3 h-3 rounded-full bg-[#ff5f57] shadow-[0_0_6px_#ff5f57]" />
               <span className="w-3 h-3 rounded-full bg-[#febc2e] shadow-[0_0_6px_#febc2e]" />
