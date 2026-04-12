@@ -9,6 +9,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000'
+  ),
   title: 'Crypt0xDev | Cybersecurity Portfolio',
   description:
     'Security researcher & developer. Ethical hacking, pentesting, CTF player.',
@@ -19,6 +24,15 @@ export const metadata: Metadata = {
     'CTF',
     'developer',
   ],
+  openGraph: {
+    title: 'Crypt0xDev | Cybersecurity Portfolio',
+    description:
+      'Security researcher & developer. Ethical hacking, pentesting, CTF player.',
+    url: 'https://crypt0x-dev-hacker-portfolio.vercel.app',
+    siteName: 'Crypt0xDev Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

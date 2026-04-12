@@ -42,8 +42,8 @@ Request
 
 ```bash
 # 1. Clonar el repo
-git clone https://github.com/Crypt0xDev/Portfolio-Crypt0xDev.git
-cd Portfolio-Crypt0xDev
+git clone https://github.com/Crypt0xDev/Crypt0xDev-Hacker-Portfolio.git
+cd Crypt0xDev-Hacker-Portfolio
 
 # 2. Instalar dependencias
 npm install

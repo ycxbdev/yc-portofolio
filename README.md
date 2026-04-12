@@ -46,7 +46,7 @@ $ uptime
 ## `~/structure`
 
 ```
-Portfolio-Crypt0xDev/
+Crypt0xDev-Hacker-Portfolio/
 ├── app/
 │   ├── page.tsx               ← Home: terminal animation + skills
 │   ├── projects/page.tsx      ← Filterable project grid + MatrixRain
@@ -70,8 +70,8 @@ Portfolio-Crypt0xDev/
 ## `~/install`
 
 ```bash
-git clone https://github.com/Crypt0xDev/Portfolio-Crypt0xDev.git
-cd Portfolio-Crypt0xDev
+git clone https://github.com/Crypt0xDev/Crypt0xDev-Hacker-Portfolio.git
+cd Crypt0xDev-Hacker-Portfolio
 npm install
 npm run dev
 ```
