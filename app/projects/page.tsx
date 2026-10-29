@@ -52,7 +52,7 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <p className="text-[#00ff9f66] text-sm font-mono">
-            {projects.length} entries found &mdash; security tools, CTF writeups
+            {projects.length} entries found &mdash; security tools,Development
             &amp; research
           </p>
         </div>
