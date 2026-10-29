@@ -13,7 +13,7 @@ const contactLinks = [
   },
   {
     label: 'GitHub',
-    value: 'github.com/BERBAHAYA/sensor sek zona illegal😹',
+    value: 'github.com/####',
     href: '',
     command: '$ git github.com',
     description: 'Source code & projects',

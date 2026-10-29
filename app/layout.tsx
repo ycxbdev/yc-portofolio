@@ -8,7 +8,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-const BASE_URL = 'https://crypt0x-dev-hacker-portfolio.vercel.app';
+const BASE_URL = 'https://vikoyota.vercel.app/';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -17,20 +17,20 @@ export const metadata: Metadata = {
       : 'http://localhost:3000'
   ),
   title: {
-    default: 'YCxBlock101 | Cybersecurity Portfolio',
-    template: '%s | YCxBlock101',
+    default: 'YComp | Portfolio',
+    template: '%s | YComp',
   },
   description:
-    'Security researcher & full-stack developer. Ethical hacking, pentesting, CTF player, and web development projects.',
+    'Security researcher & full-stack developer. Ethical hacking, pentesting, and web development projects.',
   keywords: [
     'cybersecurity',
     'pentesting',
     'ethical hacking',
-    'CTF',
+    'YComp',
     'developer',
     'security researcher',
     'web security',
-    'bug bounty',
+    'vikoyota',
     'OSCP',
     'red team',
     'portfolio',
@@ -53,11 +53,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'YCxBlock101 | Portfolio',
+    title: 'YComp | Portfolio',
     description:
-      'Security researcher & full-stack developer. Ethical hacking, pentesting, CTF player, and web development projects.',
+      'Security researcher & full-stack developer. Ethical hacking, pentesting, and web development projects.',
     url: BASE_URL,
-    siteName: 'YCxBlock101 Portfolio',
+    siteName: 'YComp Portfolio',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -65,15 +65,15 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'YCxBlock101 — Cybersecurity Portfolio',
+        alt: 'YComp — Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'YCxBlock101 | Cybersecurity Portfolio',
+    title: 'YComp | Portfolio',
     description:
-      'Security researcher & full-stack developer. Ethical hacking, pentesting, CTF player.',
+      'Security researcher & full-stack developer. Ethical hacking, pentesting, Web development.',
     images: [`${BASE_URL}/og-image.png`],
     creator: '@YCxBlock101',
   },
