@@ -3,7 +3,7 @@
 const SKILLS = [
   {
     title: 'Penetration Testing',
-    skills: ['Burp Suite', 'Metasploit', 'Nmap', 'SQLmap', 'Nikto'],
+    skills: ['Burp Suite', 'Metasploit', 'Nmap', 'SQLmap'],
     icon: '⚔',
   },
   {
@@ -13,7 +13,7 @@ const SKILLS = [
   },
   {
     title: 'Reverse Engineering',
-    skills: ['Ghidra', 'IDA Pro', 'x64dbg', 'pwndbg', 'GDB'],
+    skills: ['x64dbg', 'pwndbg', 'REA'],
     icon: '⚙',
   },
   {
@@ -29,7 +29,7 @@ const SKILLS = [
   },
   {
     title: 'Development',
-    skills: ['Python', 'TypeScript', 'Next.js', 'React', 'Node.js'],
+    skills: ['Python', 'TypeScript', 'Next.js', 'React', 'Node.js','JavaScript'],
     icon: '</>',
   },
   {

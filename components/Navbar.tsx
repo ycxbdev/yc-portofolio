@@ -34,7 +34,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <span className="text-[#00ff9f] text-lg font-bold tracking-tight group-hover:text-shadow-glow transition-all duration-300">
             <span className="text-[#00ff9f66]">[</span>
-            crypt0x<span className="text-[#00ff9f]">Dev</span>
+            YC<span className="text-[#00ff9f]">xBlock101</span>
             <span className="text-[#00ff9f66]">]</span>
           </span>
           <span className="animate-blink text-[#00ff9f] text-lg">_</span>

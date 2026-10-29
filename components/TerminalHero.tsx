@@ -741,7 +741,7 @@ const SEQUENCE: SeqEntry[] = [
     prompt: P_KALI,
   },
   {
-    text: '[■■■■■■■■■■■■] Access granted. Welcome, crypt0xdev.',
+    text: '[■■■■■■■■■■■■] Access granted. Welcome, YCxBlock101.',
     speed: 22,
     pause: 2200,
     kind: 'ok',
@@ -865,14 +865,13 @@ export default function TerminalHero() {
             style={{ textShadow: '0 0 30px #00ff9f, 0 0 60px #00ff9f40' }}
           >
             <span className="text-[#00ff9f44]">[</span>
-            <span className="text-[#00ff9f]">crypt0x</span>
-            <span className="text-white">Dev</span>
+            <span className="text-[#00ff9f]">Y</span>
+            <span className="text-white">Comp</span>
             <span className="text-[#00ff9f44]">]</span>
             <span className="animate-blink text-[#00ff9f] ml-1">_</span>
           </h1>
           <p className="text-[#00ff9faa] font-mono text-sm tracking-widest">
-            SECURITY RESEARCHER &nbsp;·&nbsp; ETHICAL HACKER &nbsp;·&nbsp; CTF
-            PLAYER
+            WEB DEV&nbsp;·&nbsp;SECURITY RESEARCHER &nbsp;·&nbsp;DARKNET&nbsp;·&nbsp;CRYPTO RESEARCHER 
           </p>
         </div>
 
@@ -885,7 +884,7 @@ export default function TerminalHero() {
               <span className="w-3 h-3 rounded-full bg-[#febc2e] shadow-[0_0_6px_#febc2e]" />
               <span className="w-3 h-3 rounded-full bg-[#28c840] shadow-[0_0_6px_#28c840]" />
               <span className="flex-1 text-center text-[11px] text-[#00ff9f33] font-mono">
-                crypt0xdev@kali — bash — 120×36
+                YCxBlock101@kali — bash — 120×36
               </span>
             </div>
             <div
