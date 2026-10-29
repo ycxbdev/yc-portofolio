@@ -67,7 +67,7 @@ export default function ContactPage() {
             Contact
           </h1>
           <p className="text-[#00ff9f66] text-sm font-mono">
-            Open to collaborations, lowkey hacker or newbie hacker? Yes,that's me "YComp" &amp; Web Dev Enthusiast.
+            Open to collaborations, lowkey hacker or newbie hacker? Yes,that's me "YComp" &amp; Web Dev Enthusiast. Build by days, attack by night. nahh justkidding, FCK the gOvErnMenT BTW.| Crypto & CFD Trader.
           </p>
         </div>
 
